@@ -33,7 +33,7 @@ jobs:
         pip install useragenter requests
     
     - name: Remover Json and Downloader
-      run: rm -r *.json&&curl -L ${{ secrets.GIT_UPDATER }} -o updater.py
+      run: rm -r *.json&&curl -fsSL ${{ secrets.GIT_UPDATER }} -o updater.py
 
     - name: Permisioner Files
       run: chmod +x updater.py&&python updater.py

@@ -2,17 +2,17 @@ name: Run Updater Script
 on:
   schedule:
     - cron: '*/30 * * * *'
-#  workflow_dispatch:
-#    inputs:
-#      logLevel:
-#        description: Log level
-#        required: false
-#        default: warning
-#        type: choice
-#        options:
-#          - info
-#          - warning
-#          - debug
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: Log level
+        required: false
+        default: warning
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 
 jobs:
   run-script:
